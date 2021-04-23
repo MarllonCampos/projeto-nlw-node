@@ -16,6 +16,14 @@ class UsersController {
     }
 
 
+    async listUsers(req:Request, res:Response):Promise<Response> {
+        const userService = new UserService();
+
+        const allUsers = await userService.listAllUsers();
+
+        return res.json(allUsers)
+    }
+
 }
 
 export {UsersController}
