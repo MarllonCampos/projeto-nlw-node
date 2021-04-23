@@ -8,7 +8,7 @@ import {
 import { v4 as uuid} from 'uuid'
 
 
-@Entity('User')
+@Entity('users')
 class User {
 
     @PrimaryColumn()
@@ -24,7 +24,7 @@ class User {
 
     constructor(){
         if (!this.id) {
-            this.id == uuid();
+            this.id = uuid();
         }
     }
 }
